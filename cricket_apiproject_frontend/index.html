@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+   <title>cricket</title>
+    </head>
+    <body>
+        <header>
+            <h1>cricket players dashboard</h1>
+            
+        </header>
+       <section class="notesList">
+      
+      
+            </section>
+        <hr>
+        <section >
+            <h2>Add players</h2>
+            <div class="createnote">
+                <form>
+                <input type="terxt" name="first_name" id="first_name" placeholder="Enter First Name" required/>
+                <input type="text" name="last_name" id="last_name" placeholder="Enter Last Name" required/>
+                <input type="email" name="email" id="email" placeholder="Enter Email" required/>
+                <input type="tel" name="phone" id="phone" placeholder="Enter Phone Number" required/>
+                <div>
+                    <label for="role">Role:</label>
+                    <select id="role" name="role" required>
+                        <option value="batsman">Batsman</option>
+                        <option value="bowler">Bowler</option>
+                        <option value="all_rounder">All rounder</option>
+                    </select>
+                </div>
+                <div class="radio-group">
+                <label>Is the player ready to play?</label>
+                <label><input type="radio" id="role_yes" name="avalible" value="yes"/>Yes</label>
+                <label><input type="radio" id="role_no" name="avalible" value="no"/>NO</label>
+                </div>
+                <button  type="button" id="createNoteButton">submit</button>
+            
+                </form>
+                <p id="warning-msg" style="color: red"></p>
+            </div>
+        </section>
+        <script type="module" src="./main.js"></script>
+    </body>
+</html>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+*
+{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins';
+
+}
+body
+{
+    background-color:green;
+}
+header{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+h1{
+ color:#00695C;
+}
+#deleteAllNotes{
+color:#E64A19;
+border: none;
+padding: 0.8rem 0.5rem;
+border-radius: 12px;
+font-weight: bold;
+border: 1px solid #00695C; 
+}
+.notesList
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.title
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.note
+{
+    background-color: white;
+    border: 1px solid darkgray;
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 1rem;
+}
+.note button{
+    background:green;
+    color:white;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.8rem 2rem;
+    border: none;
+    margin: 0.8rem 0;
+    border-radius: 12px;
+}
+.createnote
+{
+    background-color:white;
+    border: 1px solid darkgray;
+    padding: 1.5rem;
+    width: 40vw;
+    margin: 1rem;
+    border-radius: 12px;
+    color:#E64A19;
+
+}
+input,textarea{
+    display: block;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #00695C;
+    margin: 0.8rem 0;
+    width: 100%;
+}
+.radio-group
+{
+    display: flex;
+    align-items: center;
+    margin-left: -17px;
+}
+.radio-group label
+{
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+#createNoteButton
+{
+    background:orangered;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.8rem 0.5rem;
+    border: none;
+    margin: 0.8rem 0.5rem;
+    border-radius: 12px;
+}
+h2
+{
+    margin: 1rem;
+}
+</style>
